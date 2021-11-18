@@ -1,0 +1,3 @@
+include ':nativetemplates'
+include ':expandabletextview'
+include ':app', ':SmoothCheckBox-master', ':rating-view', ':folioreader'
