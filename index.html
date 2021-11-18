@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Documentation by "Viavi WebTech"</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style type="text/css">
+    .content{
+      padding: 2em;
+    }
+    header h3{
+      color: #e74c3c;  
+    }
+    .title{
+      font-size: 22px;
+      color: #666;
+    }
+    .content_holder{
+      padding: 0px 20px;
+    }
+    p{
+      margin-bottom: 5px;
+    }
+    .heading_2{
+      font-weight: 600;
+      font-size: 20px;
+      color: #666;
+      margin: 20px 0px 5px 0px;
+    }
+    .heading_3{
+      font-weight: 600;
+      font-size: 18px;
+      color: #777;
+      margin: 20px 0px 5px 0px;
+    }
+    img.img{
+      margin: 10px 0px;
+      box-shadow: 0px 3px 10px 0px #666;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+
+</head>
+<body>
+<section id="header">
+  <header> <span class="image avatar"><img src="images/logo.png" alt="" /></span>
+    <h4 id="logo"><a href="index.html" style="color: #FFF">Android Ebook App</a></h4>
+  </header>
+  <nav id="nav">
+    <ul>
+      <li><a href="#server" class="active">Server Requirements</a></li>
+      <li><a href="#installation">Installation Process</a></li>
+      <li><a href="#mail">Mail/SMTP Configuration</a></li>
+      <li><a href="#app_language">App Language</a></li>  
+      <li><a href="#verify">Verify Purchase Details</a></li>
+      <li><a href="#license">License</a></li>
+      <li><a href="#support">Support</a></li>
+    </ul>
+  </nav>
+</section>
+<div id="wrapper">
+  <div id="main">
+
+    <section id="server">
+      <div class="container-fluid content">
+          <header class="major">
+            <h3>Server Requirements</h3>
+          </header>
+          <div class="borderTop">
+            <div class="span-12 last">
+              <div class="container-fluid content_holder">
+                <ul style="font-size: 18px;">
+                    <li>PHP &gt;= 7.2</li>
+                    <li>allow_url_fopen Enabled</li>
+                    <li>short_open_tag Enabled</li>
+                    <li>cURL support Enabled</li>
+                    <li>PDO PHP Extension</li>
+                    <li>JSON PHP Extension</li>
+                </ul> 
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="installation">
+      <div class="container-fluid content">
+          <header class="major">
+            <h3>Installation Process</h3>
+          </header>
+          <div class="borderTop">
+      			<div class="span-12 last">
+              <h4 class="title">&#8658; Installing Requirements</h4>
+              <div class="container-fluid content_holder">
+                <p>
+                  The following quick steps show how the installation progress.
+                </p>
+                <p class="heading_2">&#8620; Unzip and Upload</p>
+                <div class="container-fluid content_holder">
+                  Extract the archive you have downloaded from CodeCanyon. Copy all files from FIRST TIME BUYER > php_web_services folder and upload to your server.
+                </div>
+                <p class="heading_2">&#8620; One-Click Installation</p>
+                <div class="container-fluid content_holder">
+                  Extract the archive you have downloaded from CodeCanyon. Copy all files from FIRST TIME BUYER > php_web_services folder and upload to your server.
+                  <p class="heading_3">&#8674; <span>Step 1 -</span> Open Installation Wizard</p>
+                  <div class="container-fluid content_holder">
+                    <p>
+                      If you have all requirements on your server so system will redirect you to install wizard page.
+                    </p>
+                    Installation Wizard Url <strong>e.g. http://example.com/</strong>
+
+                    <img src="images/install_ss1.jpg" class="img">
+
+                  </div>
+
+                  <p class="heading_3">&#8674; <span>Step 2 -</span> Verify Purchase</p>
+                  <div class="container-fluid content_holder">
+                    <p>
+                      Next step is <strong>envato buyer purchase verification</strong>.
+                      In this step user must provide envato username, envato purchase code and envato buyer email
+                    </p>
+
+                    <img src="images/install_ss2.jpg" class="img">
+                    <img src="images/install_ss3.jpg" class="img">
+                  </div>
+
+                  <p class="heading_3">&#8674; <span>Step 3 -</span> Database Settings</p>
+                  <div class="container-fluid content_holder">
+                    <p>
+                      In this step user must provide database name, username, password and host name(default: localhost.)
+                    </p>
+
+                    <p>
+                      After fill that database details click <strong>Import</strong> button
+                    </p>
+
+                    <img src="images/install_ss4.jpg" class="img">
+
+                    <p class="heading_3">Database importing will take some time to import database</p>
+                    <p>
+                      After successfully database import you will get this below screen
+                    </p>
+
+                    <img src="images/install_ss5.jpg" class="img">
+
+
+
+                  </div>
+
+                  <p class="heading_3">&#8674; <span>Step 4 -</span> Finish</p>
+                  <div class="container-fluid content_holder">
+
+                    <img src="images/install_ss6.jpg" class="img">
+
+                  </div>
+
+                  <p class="heading_3">We created an admin account for you by default</p>
+                  <p>Username: admin</p>
+                  <p>Password: admin</p>
+                  
+                </div>
+              </div>
+      			</div>
+      		</div>
+      </div>
+    </section>
+
+    <section id="mail">
+      <div class="container-fluid content">
+          <header class="major">
+            <h3>Mail/SMTP Configuration</h3>
+          </header>
+          <div class="borderTop">
+            <div class="span-12 last">
+              <div class="container-fluid content_holder">
+
+                <p>So if you want to enable mail sending then you must configure this mail/smtp configuration in admin panel.</p>
+
+                <p>You can find this settings in Settings > SMTP Settings Tab.</p>
+                <p>Enter all SMTP Details as shown in screen shot below</p>
+
+                <img src="images/smtp_setup.png" class="img">
+
+                <p class="heading_3">Hosting Server:</p>
+                <p>If you have problem with mailing with this setup than please contact your provider with those variables and ask correct info</p>
+
+                <p class="heading_3">Gmail:</p>
+                <p><strong style="color: #F00">NOTE:</strong> You have to set less secure apps access your account enable and 2 factor authentication off
+                Less secure apps - Google Account please go through this <a href="https://myaccount.google.com/intro/security" target="_blank">Link</a></p>
+                <p class="heading_3">Default config details for Gmail SMTP</p>
+                <p><strong>Gmail SMTP Host:</strong> smtp.gmail.com</p>
+                <p><strong>Gmail Email</strong>: xxxx@gmail.com</p>
+                <p><strong>Gmail Password</strong>: xxxxxx</p>
+                <p><strong>SMTPSecure(TLS)</strong> - <strong>Port No.:</strong> 587</p>
+                <p><strong>SMTPSecure(SSL)</strong> - <strong>Port No.:</strong> 465</p>
+
+                <img src="images/2_step_verification.png" class="img">
+                <img src="images/less_secure.png" class="img">
+
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+      <section id="app_language">
+      <div class="container">
+
+        <h2 id="toc" > App Language</h2>
+        <ol>
+          <li>First of all find the  <b>language</b> folder from the downloaded package and go to <b>app_language.php</b> file.</li>
+          <li>You can modify your app messages by changing these messages</li>
+          <li>Please refer to the screenshot given below.</li> 
+          <br/>      
+          <img src="images/app_language.png" style="width: 100%;height: auto;">
+        </ol>
+      </div>
+    </section> 
+
+    <section id="verify">
+      <div class="container-fluid content">
+          <header class="major">
+            <h3>Verify Purchase Details</h3>
+          </header>
+          <div class="borderTop">
+            <div class="span-12 last">
+              <div class="container-fluid content_holder">
+                <p>Verify Purchase contains the envato verified details here you also can change the package name from android application</p>
+
+                <img src="images/verify_purchase.png" class="img">
+
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="license">
+      <div class="container-fluid content">
+          <header class="major">
+            <h3>License</h3>
+          </header>
+          <div class="borderTop">
+            <div class="span-12 last">
+              <div class="container-fluid content_holder">
+                <p class="heading_3">Regular License</p>
+                <p>Use, by you or one client, in a single end product which end users are not charged for. The total price includes the item price and a buyer fee.</p>
+
+                <p class="heading_3">Extended License</p>
+                <p>Use, by you or one client, in a single end product which end users can be charged for. The total price insurances</p>
+
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+     <section id="support">
+      <div class="container-fluid content">
+          <header class="major">
+            <h3>Support</h3>
+          </header>
+          <div class="borderTop">
+            <div class="span-12 last">
+              <div class="container-fluid content_holder">
+                <p class="heading_3">We provide support through Skype, Email or WhatsApp.</p>
+               	<p><strong>Skype:</strong> support.viaviweb OR viaviwebtech</p>
+                <p><strong>Email:</strong> info@viaviweb.com OR viaviwebtech@gmail.com</p>
+                <p><strong>WhatsApp:</strong> +919227777522</p>
+
+                <p class="heading_3">Working Days:</p>
+                <p>Monday to Friday</p>
+
+                <p class="heading_3">Business Hours:</p>
+                <p>10:00 AM to 6:00 PM - <strong>Time Zone:</strong> GMT +5:30 </p>
+
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+  </div>
+  
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container-fluid content">
+    <div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing the app. If you have any questions that are beyond the scope of this help file, please feel free to message me via my user page contact form <a href="http://codecanyon.net/user/viaviwebtech?ref=viaviwebtech">here</a>. Thanks so much!</p>
+			</div>
+      <ul class="copyright">
+        <li>
+          <h3>Vishal Parmar</h3>
+        </li>
+        <li><a href="http://www.viaviweb.in">Viavi WebTech</a></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!-- Scripts --> 
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/jquery.scrollzer.min.js"></script> 
+<script src="assets/js/jquery.scrolly.min.js"></script> 
+<script src="assets/js/skel.min.js"></script> 
+<script src="assets/js/util.js"></script> 
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]--> 
+<script src="assets/js/main.js"></script>
+</body>
+</html>
