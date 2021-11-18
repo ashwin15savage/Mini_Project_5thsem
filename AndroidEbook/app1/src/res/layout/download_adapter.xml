@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/con_download_adapter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_one_download_adapter">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_download_adapter"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_download_adapter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/placeholder_portable"
+            android:contentDescription="@string/app_name" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewName_download_adapter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/textView_download_adapter"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_subTitle_download_adapter"
+        app:layout_constraintEnd_toStartOf="@+id/button_delete_adapter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cardView_download_adapter"
+        app:layout_constraintTop_toTopOf="@+id/cardView_download_adapter"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView_subTitle_download_adapter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewName_download_adapter"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="5dp"
+        android:text="@string/app_name"
+        android:textColor="@color/textView_sub_download_adapter"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView_download_adapter"
+        app:layout_constraintEnd_toStartOf="@+id/button_delete_adapter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cardView_download_adapter"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName_download_adapter" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_delete_adapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/button_bg"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

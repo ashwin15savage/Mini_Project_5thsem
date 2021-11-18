@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_below="@+id/cardView_report_book"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@color/cardViewBg_report_dialog">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView_title_review_dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/title_bg_review_dialog"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/report_book"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInput_report_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/report_book"
+            android:textColorHint="@color/textView_hint_pro"
+            app:boxStrokeColor="@color/textView_box_select_color"
+            app:hintTextColor="@color/textView_hint_layout_pro"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_title_review_dialog">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_report_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:maxLines="4"
+                android:minLines="4"
+                android:textColor="@color/editText_pro"
+                android:theme="@style/editText_style" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_submit_review_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_close_review_dialog"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInput_report_dialog" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_close_review_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:text="@string/close"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/red"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_submit_review_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_submit_review_dialog"
+            app:layout_constraintTop_toTopOf="@+id/button_submit_review_dialog" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

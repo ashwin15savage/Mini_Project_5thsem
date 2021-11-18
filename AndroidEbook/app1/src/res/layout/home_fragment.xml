@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_main_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con_search_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/con_sliderBg_home">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_home"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:imeOptions="actionSearch"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="45dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:hint="@string/app_name"
+                    android:textColor="@color/editText_home"
+                    android:textColorHint="@color/editText_hint_home"
+                    android:theme="@style/editText_home_style"
+                    android:background="@drawable/home_search_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView_search_home"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_search_menu"
+                    app:tint="@color/image_editText_home"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="@+id/editText_home"
+                    app:layout_constraintEnd_toEndOf="@+id/editText_home"
+                    app:layout_constraintTop_toTopOf="@+id/editText_home" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con_slider_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/con_search_home">
+
+                <com.example.androidebook.util.EnchantedViewPager
+                    android:id="@+id/slider_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.rd.PageIndicatorView
+                    android:id="@+id/pageIndicatorView_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:piv_animationType="scale"
+                    app:piv_dynamicCount="true"
+                    app:piv_interactiveAnimation="true"
+                    app:piv_selectedColor="@color/page_indicator_active_home"
+                    app:piv_unselectedColor="@color/page_indicator_inactive_home"
+                    app:piv_viewPager="@id/slider_home"
+                    attrs:piv_padding="6dp"
+                    attrs:piv_radius="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/slider_home" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con_continue_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/con_slider_home">
+
+                <View
+                    android:id="@+id/view_continue_home"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/home_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_subTitle_continue_home"
+                    app:layout_constraintTop_toTopOf="@+id/textView_title_continue_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_title_continue_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/continue_book"
+                    android:textColor="@color/textView_home"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView_continueViewAll_home"
+                    app:layout_constraintStart_toEndOf="@+id/view_continue_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_subTitle_continue_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/continue_des"
+                    android:textColor="@color/textView_sub_home"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView_title_continue_home"
+                    app:layout_constraintStart_toStartOf="@+id/textView_title_continue_home"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_title_continue_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_continueViewAll_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/view_all"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textView_app_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_subTitle_continue_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView_title_continue_home" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_continue_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_continue_home" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con_category_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/con_continue_home">
+
+                <View
+                    android:id="@+id/view_category_home"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/home_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_category_home"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_category_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/category"
+                    android:textColor="@color/textView_home"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/textView_categoryViewAll_home"
+                    app:layout_constraintStart_toEndOf="@+id/view_category_home"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_categoryViewAll_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/view_all"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textView_app_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_category_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView_category_home" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_category_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_category_home" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con_latest_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/con_category_home">
+
+                <View
+                    android:id="@+id/view_latest_home"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/home_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_subTitle_latest_home"
+                    app:layout_constraintTop_toTopOf="@+id/textView_title_latest_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_title_latest_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/latest_book"
+                    android:textColor="@color/textView_home"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView_latestViewAll_home"
+                    app:layout_constraintStart_toEndOf="@+id/view_latest_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_subTitle_latest_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/latest_youVe_recently_read"
+                    android:textColor="@color/textView_sub_home"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView_title_latest_home"
+                    app:layout_constraintStart_toStartOf="@+id/textView_title_latest_home"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_title_latest_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_latestViewAll_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/view_all"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textView_app_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_subTitle_latest_home"
+                    app:layout_constraintTop_toTopOf="@+id/textView_title_latest_home" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_latest_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_latest_home" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con_popular_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/con_latest_home">
+
+                <View
+                    android:id="@+id/view_popular_home"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/home_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_subTitle_popular_home"
+                    app:layout_constraintTop_toTopOf="@+id/textView_title_popular_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_title_popular_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/popular_books"
+                    android:textColor="@color/textView_home"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView_popularViewAll_home"
+                    app:layout_constraintStart_toEndOf="@+id/view_popular_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_subTitle_popular_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/stories_youVe_recently_read"
+                    android:textColor="@color/textView_sub_home"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView_title_popular_home"
+                    app:layout_constraintStart_toStartOf="@+id/textView_title_popular_home"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_title_popular_home" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_popularViewAll_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/view_all"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textView_app_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_subTitle_popular_home"
+                    app:layout_constraintTop_toTopOf="@+id/textView_title_popular_home" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_popular_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_popular_home" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con_author_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/con_popular_home">
+
+                <View
+                    android:id="@+id/view_author_home"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/home_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_author_home"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_author_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/author"
+                    android:textColor="@color/textView_home"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/textView_authorViewAll_home"
+                    app:layout_constraintStart_toEndOf="@+id/view_author_home"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_authorViewAll_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="@string/view_all"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textView_app_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_author_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView_author_home" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_author_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_author_home" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/ProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        layout="@layout/no_data_found"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

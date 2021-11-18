@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@color/cardViewBg_rating_dialog">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView_ratingDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="60dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="@string/rating"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@color/title_bg_rating_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_close_ratingDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_close"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="@+id/textView_ratingDialog"
+            app:layout_constraintTop_toTopOf="@+id/textView_ratingDialog"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_ratingDialog" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView_des_ratingDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="@string/thanks_for_rating_msg"
+            android:textColor="@color/textView_des_rating_dialog"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_ratingDialog" />
+
+        <com.github.ornolfr.ratingview.RatingView
+            android:id="@+id/ratingBar_ratingDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            app:drawable_empty="@drawable/stare"
+            app:drawable_filled="@drawable/select_stare"
+            app:drawable_margin="3dp"
+            app:drawable_size="40dp"
+            app:is_indicator="false"
+            app:max_count="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_des_ratingDialog" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_ratingDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar_ratingDialog" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

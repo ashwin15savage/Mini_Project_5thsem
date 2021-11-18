@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout_authorBook_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_authorBook_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_authorBook_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/transparent"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/con_authorDetail_authorBook_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/authorDetail_bg_authorBook"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageView_authorBook_fragment"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/placeholder_portable"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView_name_authorBook_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/app_name"
+                            android:textColor="@color/textView_authorBook"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/textView_subName_authorBook_fragment"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_authorBook_fragment"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_authorBook_fragment"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView_subName_authorBook_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/app_name"
+                            android:textColor="@color/textView_sub_authorBook"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_authorBook_fragment"
+                            app:layout_constraintEnd_toEndOf="@+id/textView_name_authorBook_fragment"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/textView_name_authorBook_fragment"
+                            app:layout_constraintTop_toBottomOf="@+id/textView_name_authorBook_fragment" />
+
+                        <me.chensir.expandabletextview.ExpandableTextView
+                            android:id="@+id/textViewDes_authorBook_fragment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/lorem"
+                            app:DrawableAndTextGravity="left"
+                            app:collapseText="@string/less"
+                            app:contentTextColor="@color/textView_sub_authorBook"
+                            app:contentTextSize="14sp"
+                            app:expandCollapseTextColor="@color/textView_app_color"
+                            app:expandText="@string/more"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView_authorBook_fragment"
+                            app:maxCollapsedLines="3" />
+
+                        <ImageView
+                            android:id="@+id/imageView_youtube_authorBook_fragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/youtube_ic"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView_facebook_authorBook_fragment"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewDes_authorBook_fragment" />
+
+                        <ImageView
+                            android:id="@+id/imageView_facebook_authorBook_fragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/fb_ic"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_youtube_authorBook_fragment"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView_instagram_authorBook_fragment"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_youtube_authorBook_fragment"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_youtube_authorBook_fragment" />
+
+                        <ImageView
+                            android:id="@+id/imageView_instagram_authorBook_fragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/insta_ic"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_facebook_authorBook_fragment"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView_web_authorBook_fragment"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_facebook_authorBook_fragment"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_facebook_authorBook_fragment" />
+
+                        <ImageView
+                            android:id="@+id/imageView_web_authorBook_fragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/website_ic"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_instagram_authorBook_fragment"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_instagram_authorBook_fragment"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_instagram_authorBook_fragment" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/viewTitle_authorBook_fragment"
+                        android:layout_width="3dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/home_line"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/con_authorDetail_authorBook_fragment" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView_represent_authorBook_fragment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/author_work"
+                        android:textColor="@color/textView_authorBook"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/materialTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/viewTitle_authorBook_fragment"
+                        app:layout_constraintTop_toTopOf="@+id/viewTitle_authorBook_fragment"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/author_work_tag"
+                        android:textColor="@color/textView_sub_authorBook"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/viewTitle_authorBook_fragment"
+                        app:layout_constraintEnd_toEndOf="@+id/textView_represent_authorBook_fragment"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/textView_represent_authorBook_fragment"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_represent_authorBook_fragment" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_authorBook_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                layout="@layout/no_data_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar_authorBook_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/ProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
